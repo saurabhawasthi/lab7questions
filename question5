@@ -1,5 +1,4 @@
-# lab7questions5
-#include <iostream>
+ #include <iostream>
 using namespace std;
 
 class ZooAnimal  
@@ -26,10 +25,16 @@ class ZooAnimal
    {
     return name;
    }
+   void ZooAnimal::Create(char *str,int a1, int a2, int a3)
+      {
+         bozo.name=str;
+         bozo.cagenumber=a1;
+         bozo.wieghtdate=a2;
+         bozo.weight=a3;
+      }
+   // -------- member function to return the number of days since the animal was last weighed
    
-   // -------- member function to return the number of days
-   // -------- since the animal was last weighed
-
+   int Zooanimal::daysSinceLastWeighed(int today)
    {
     int startday, thisday;
     thisday = today/100*30 + today - today/100*100;
@@ -37,6 +42,8 @@ class ZooAnimal
     if (thisday < startday) 
         thisday += 360;
     return (thisday-startday);
+   }
+
    void usingZooanimalclass()
    {
       int 
@@ -50,4 +57,4 @@ class ZooAnimal
     bozo.Destroy ();
    }
 
-     
+    
